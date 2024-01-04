@@ -3,15 +3,21 @@
   padding: 0; 
   font-family: 'Roboto Mono', monospace; 
 }
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+
+
+.win-container{
+  position: absolute;
+  top: 0;
+  background-color: rgba(87, 83, 83, 0.9);
+  font-size: 100px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 /* HEADERRRRRRRRRRRRRRRRRRRRR */
 header{
@@ -63,18 +69,19 @@ main{
 .container{
   margin: 6rem;
   display: grid;
-  grid-template-columns: repeat(3,minmax(100px,150px));
-  grid-auto-rows: minmax(100px,150px);
+  grid-template-columns: repeat(3,150px);
+  grid-auto-rows: 150px;
   gap: 20px;
 }
 
 .box{
+  box-sizing: border-box;
   background: white;
   background-size:70%;
   background-position: center;
   background-repeat: no-repeat;
   box-shadow: 5px 5px 10px gray;
-  border: 2px solid gray;
+  border: 3px solid gray;
   border-radius: 10px;
   padding: 75px;
   transition: translate 0.1s, padding 0.1s, box-shadow 0.1s;
@@ -86,14 +93,6 @@ main{
 
 .mark-x{
   background-image: url(mark-x.png);
-}
-.box:nth-child(2n){
-  background-image: url(mark-x.png);
-  color: lightblue;
-}
-.box:nth-child(2n - 1){
-  background-image: url(mark-o.png);
-  color: lightcoral;
 }
 
 .box:hover{
