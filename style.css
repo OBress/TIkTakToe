@@ -1,0 +1,111 @@
+*{
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Roboto Mono', monospace; 
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* HEADERRRRRRRRRRRRRRRRRRRRR */
+header{
+  position: relative;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 1rem;
+}
+
+header > h1{
+  font-size: 60px;
+  text-decoration: underline ;
+}
+
+header > button{
+  position: absolute;
+  top: 100%;
+  background: linear-gradient(90deg, lightblue, lightcoral );
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 3px;
+  font-size: 40px;
+  cursor: pointer;
+  text-align: center;
+  text-justify: center;
+  transition: padding 0.03s;
+  font-weight: 500;
+  box-shadow: 5px 5px 10px gray;
+}
+
+header > button:active{
+  padding: 0px;
+  opacity: 0.7;
+}
+
+
+/* mAINNNN */
+main{
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.container{
+  margin: 6rem;
+  display: grid;
+  grid-template-columns: repeat(3,minmax(100px,150px));
+  grid-auto-rows: minmax(100px,150px);
+  gap: 20px;
+}
+
+.box{
+  background: white;
+  background-size:70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 5px 5px 10px gray;
+  border: 2px solid gray;
+  border-radius: 10px;
+  padding: 75px;
+  transition: translate 0.1s, padding 0.1s, box-shadow 0.1s;
+}
+
+.mark-o{
+  background-image: url(mark-o.png);
+}
+
+.mark-x{
+  background-image: url(mark-x.png);
+}
+.box:nth-child(2n){
+  background-image: url(mark-x.png);
+  color: lightblue;
+}
+.box:nth-child(2n - 1){
+  background-image: url(mark-o.png);
+  color: lightcoral;
+}
+
+.box:hover{
+  background-color: rgb(235, 233, 233);
+  
+  cursor: pointer;
+}
+
+.box:active{
+  translate:  2.5px 2.5px;
+  box-shadow: 2px 2px 5px gray;
+  padding: 0;
+}
+
+
